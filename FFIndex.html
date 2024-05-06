@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stress Toys</title>
+  <link rel="stylesheet" href="ffstyles.css">
+</head>
+<body>
+  <h1>Stress Toys</h1>
+  <div class="product-container">
+    <script>
+      const stressToys = [
+        {
+          "name": "Squishable Stress Ball",
+          "price": 10,
+          "image": "https://i.imgur.com/44t19yM.jpg"
+        },
+        {
+          "name": "Kneadable Stress Ball",
+          "price": 5,
+          "image": "https://i.imgur.com/8Y44s4I.jpg"
+        },
+        {
+          "name": "Pop It Fidget Toy",
+          "price": 15,
+          "image": "https://i.imgur.com/x8768s1.jpg"
+        },
+        {
+          "name": "Fidget Cube",
+          "price": 20,
+          "image": "https://i.imgur.com/0hXo6q4.jpg"
+        }
+      ];
+
+      const getRandomStressToy = () => {
+        return stressToys[Math.floor(Math.random() * stressToys.length)];
+      };
+
+      const renderProductCard = (stressToy) => {
+        const productCard = `
+          <div class="product-card">
+            <img src="${stressToy.image}" alt="${stressToy.name}" />
+            <h2>${stressToy.name}</h2>
+            <p>${stressToy.price}</p>
+            <button>Add to Cart</button>
+          </div>
+        `;
+
+        return productCard;
+      };
+
+      const renderProductContainer = () => {
+        const stressToy = getRandomStressToy();
+        const productCard = renderProductCard(stressToy);
+
+        return productCard;
+      };
+
+      const main = () => {
+        const productContainer = document.querySelector(".product-container");
+
+        productContainer.innerHTML = renderProductContainer();
+      };
+
+      main();
+    </script>
+  </div>
+</body>
+</html>
