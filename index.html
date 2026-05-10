@@ -1,68 +1,129 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Stress Toys</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fidgetyfarm — Screen-free adventures for curious kids</title>
+  <meta name="description" content="Fidgetyfarm is home to the Fomo Gnomes — printable activity packs for curious kids aged 4–8. Meet Fuzz and play offline."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-  <h1>Stress Toys</h1>
-  <div class="product-container">
-    <script>
-      const stressToys = [
-        {
-          "name": "Squishable Stress Ball",
-          "price": 10,
-          "image": "https://i.imgur.com/44t19yM.jpg"
-        },
-        {
-          "name": "Kneadable Stress Ball",
-          "price": 5,
-          "image": "https://i.imgur.com/8Y44s4I.jpg"
-        },
-        {
-          "name": "Pop It Fidget Toy",
-          "price": 15,
-          "image": "https://i.imgur.com/x8768s1.jpg"
-        },
-        {
-          "name": "Fidget Cube",
-          "price": 20,
-          "image": "https://i.imgur.com/0hXo6q4.jpg"
-        }
-      ];
 
-      const getRandomStressToy = () => {
-        return stressToys[Math.floor(Math.random() * stressToys.length)];
-      };
+  <!-- ── NAV ─────────────────────────────────────── -->
+  <nav>
+    <div class="nav-inner">
+      <span class="brand">Fidgetyfarm</span>
+      <a href="#pack" class="nav-cta">Get Activity Pack 1</a>
+    </div>
+  </nav>
 
-      const renderProductCard = (stressToy) => {
-        const productCard = `
-          <div class="product-card">
-            <img src="${stressToy.image}" alt="${stressToy.name}" />
-            <h2>${stressToy.name}</h2>
-            <p>${stressToy.price}</p>
-            <button>Add to Cart</button>
-          </div>
-        `;
+  <!-- ── HERO ─────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-text">
+      <p class="eyebrow">For curious kids · Ages 4–8</p>
+      <h1>Screen-free<br>adventures<br><em>live here.</em></h1>
+      <p class="hero-body">Fidgetyfarm is home to the Fomo Gnomes — magical creatures who cannot sit still. Neither should your kids.</p>
+      <a href="#pack" class="btn-primary">Meet Fuzz &amp; get Pack 1 →</a>
+    </div>
+    <div class="hero-image">
+      <img src="images/fuzz.png" alt="Fuzz the Fomo Gnome — a wide-eyed gnome with wild green hair and freckle blotches"/>
+      <div class="hero-image-label">Fuzz · Custodian of Fidgetyfarm</div>
+    </div>
+  </section>
 
-        return productCard;
-      };
+  <!-- ── WHAT IS FIDGETYFARM ───────────────────────── -->
+  <section class="about-strip">
+    <div class="strip-inner">
+      <div class="strip-item">
+        <span class="strip-icon">🌿</span>
+        <span>Print at home</span>
+      </div>
+      <div class="strip-divider"></div>
+      <div class="strip-item">
+        <span class="strip-icon">✏️</span>
+        <span>Colour &amp; play</span>
+      </div>
+      <div class="strip-divider"></div>
+      <div class="strip-item">
+        <span class="strip-icon">📵</span>
+        <span>Zero screens</span>
+      </div>
+      <div class="strip-divider"></div>
+      <div class="strip-item">
+        <span class="strip-icon">🧌</span>
+        <span>New gnomes coming</span>
+      </div>
+    </div>
+  </section>
 
-      const renderProductContainer = () => {
-        const stressToy = getRandomStressToy();
-        const productCard = renderProductCard(stressToy);
+  <!-- ── ACTIVITY PACK ─────────────────────────────── -->
+  <section class="pack-section" id="pack">
+    <div class="pack-inner">
 
-        return productCard;
-      };
+      <div class="pack-preview">
+        <div class="pack-card">
+          <div class="pack-card-badge">Activity Pack · No.1</div>
+          <div class="pack-card-title">Fomo Gnomes</div>
+          <div class="pack-card-sub">Fidgetyfarm</div>
+          <div class="pack-card-fuzz">🧌</div>
+          <div class="pack-card-age">Ages 4–8</div>
+        </div>
+      </div>
 
-      const main = () => {
-        const productContainer = document.querySelector(".product-container");
+      <div class="pack-info">
+        <p class="eyebrow">Out now · Free to download</p>
+        <h2>Fomo Gnomes<br>Activity Pack 1</h2>
+        <p class="pack-tagline">Meet Fuzz. Play the Fomo Game. Crack the mystery. Make the pledge.</p>
 
-        productContainer.innerHTML = renderProductContainer();
-      };
+        <ul class="pack-includes">
+          <li><span>🎨</span> Colour Fuzz — meet the Custodian of Fidgetyfarm</li>
+          <li><span>🎮</span> The Fomo Game — blind noughts &amp; crosses with a twist</li>
+          <li><span>🌀</span> Gnome Maze — two routes, one shortcut</li>
+          <li><span>🔍</span> Vanishing Letters — a farm word search mystery</li>
+          <li><span>🌿</span> The Fomo Pledge — cut out, sign &amp; pin up</li>
+        </ul>
 
-      main();
-    </script>
-  </div>
+        <div class="pack-actions">
+          <!-- GUMROAD: replace href with your Gumroad product URL when live -->
+          <a href="#" class="btn-primary" id="download-btn">Download free ↓</a>
+          <p class="pack-small">Print at home · 6 pages · A4 · PDF</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── EMAIL CAPTURE ─────────────────────────────── -->
+  <section class="email-section" id="signup">
+    <div class="email-inner">
+      <p class="eyebrow eyebrow-light">More gnomes on the way</p>
+      <h2>Be first for Pack 2</h2>
+      <p class="email-body">New Fomo Gnomes adventures, characters and activities — straight to your inbox.<br>No spam. Just gnomes.</p>
+
+      <!-- ─────────────────────────────────────────────────────
+           GROOVEFUNNELS: replace this entire <form> block with
+           your GrooveFunnels / GrooveMail embed code.
+           Create a list in GrooveMail → Forms → get embed code.
+      ────────────────────────────────────────────────────── -->
+      <form class="email-form" action="#" method="post" onsubmit="return false;">
+        <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address"/>
+        <button type="submit" class="btn-primary">Count me in 🌱</button>
+      </form>
+      <!-- END GROOVEFUNNELS BLOCK -->
+
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────── -->
+  <footer>
+    <div class="footer-inner">
+      <span class="brand brand-sm">Fidgetyfarm</span>
+      <p class="footer-tagline">Screen-free adventures for curious kids · Ages 4–8</p>
+      <p class="footer-copy">© 2026 Fidgetyfarm · fidgetyfarm.com</p>
+    </div>
+  </footer>
+
 </body>
 </html>
